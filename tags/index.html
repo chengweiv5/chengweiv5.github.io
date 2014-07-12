@@ -7,11 +7,12 @@ title: Tags
 <div class="box">
   <a name="{{ tag | first | cgi_escape }}"></a>
 	<h1>{{ tag | first }}</h1>
-	<ul class="postList">	
+	<ul>
 	{% for posts in tag %}
     {% for post in posts %}
       {% if post.title %}
-    	  <li>
+				<li class="postlist">
+					<span class="date">{{ post.date | date_to_string }}</span> &raquo;
           <a href="{{ post.url }}">{{post.title}}</a>
         </li>
 	    {% endif %}

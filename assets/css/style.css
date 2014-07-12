@@ -122,8 +122,19 @@ h5 {
 	font-style: italic;
 }
 
+li.postlist {
+	padding: 10px 0 10px 0;
+}
 
+span.date {
+	color: #abab96;
+}
 
+article .date {
+	color: #abab96;
+	font-size: 1.4em;
+	text-align: right;
+}
 
 /*** Structure ***/
 #page {

@@ -5,17 +5,18 @@ title: Archives
 
 <div id="blog-archives">
 
-	{% for post in site.posts %}
-		<article class="post">
-			{% if post.external-url %}
-				<h1>
-					<a href="{{ post.external-url }}">{{ post.title }}</a> 
+	<ul>
+		{% for post in site.posts %}
+			<li class="postlist">
+				<span class="date">{{ post.date | date_to_string }}</span> &raquo;
+				{% if post.external-url %}
+					<a href="{{ post.external-url }}">{{ post.title }}</a>
 					<a class="anchor" href="{{ post.url }}">&#9875;</a>
-				</h1>
-			{% else %}
-				<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-			{% endif %}
-		</article>
-	{% endfor %}
+				{% else %}
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
 
 </div>
