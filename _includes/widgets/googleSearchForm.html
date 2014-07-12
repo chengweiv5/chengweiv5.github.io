@@ -1,0 +1,21 @@
+{% comment %}
+	Google search box
+	
+	Author: Sebastian Teumert (<http://www.teumert.net>, <http://www.github.com/NetzwergX>)
+	
+	This widget displays a simple search box, linked to the google search.	
+	
+	For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-toolkit>.
+{% endcomment %}
+<script type="text/javascript">
+	function addSite() {		
+		document.getElementsByName("q")[0].value += " site:{{site.url}}";				
+	}
+</script>
+<section>			
+	<form method="get" action="http://www.google.com/search" id="search" onsubmit="return addSite();" style="padding-bottom:10px">
+		<input name="q" type="text" placeholder="Search…"/>
+		<input type="hidden" name="output" value="search" />
+		<button type="submit"><span style="color:#cb4b16">Google</span></button>
+	</form>
+</section>	
