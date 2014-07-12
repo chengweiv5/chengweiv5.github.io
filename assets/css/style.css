@@ -129,7 +129,7 @@ li.postlist {
 	padding: 10px 0 10px 0;
 }
 
-.postdate, span.date {
+.postdate {
 	color: #abab96;
 }
 
@@ -148,9 +148,8 @@ article .date {
 
 #header {
 	width: 800px;
-	margin: 40px auto 50px auto;
+	margin: 40px auto auto auto;
 	text-align: center;
-	border-bottom: 1px solid #073642;
 }
 #header h1 {
 	font-size: 32px;
@@ -166,16 +165,16 @@ article .date {
 #footer {
 	width: 800px;
 	/* top left bottom right */
-	margin: 50px auto 20px auto;
+	margin: auto auto 20px auto;
 	padding-top: 10px;
 	font-size: 0.85em;
-	border-top: 1px solid #073642;
 	text-align: center;
 }
 
 #content {
-	width: 750px;
-	margin: 0 40px 0 auto;
+	width: 800px;
+	margin: auto 40px auto auto;
+	padding: 30px 0px 0px 0px;
 }
 
 #sidebar {
@@ -209,7 +208,7 @@ article .date {
 
 /*** Posts ***/
 article {
-	margin-bottom: 40px;
+	padding: 0px 50px 30px 20px;
 }
 
 article h1 {

@@ -45,8 +45,11 @@ blockquote {
 	background-color: #073642;
 }
 
-#header #footer {
-	border-color: #073642;
+#content {
+	background-color: #073642;
+	border: none;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
 }
 
 .inlinetags {

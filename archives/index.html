@@ -3,12 +3,12 @@ layout: default
 title: Archives
 ---
 
-<div id="blog-archives">
+<article>
 
 	<ul>
 		{% for post in site.posts %}
 			<li class="postlist">
-				<span class="date">{{ post.date | date_to_string }}</span> &raquo;
+				<span style="color:#abab96">{{ post.date | date_to_string }}</span> &raquo;
 				{% if post.external-url %}
 					<a href="{{ post.external-url }}">{{ post.title }}</a>
 					<a class="anchor" href="{{ post.url }}">&#9875;</a>
@@ -19,4 +19,4 @@ title: Archives
 		{% endfor %}
 	</ul>
 
-</div>
+</article>
