@@ -1,0 +1,22 @@
+---
+layout: default
+title: Tags
+---
+<!-- categories -->	
+{% for tag in site.tags %}
+<div class="box">
+  <a name="{{ tag | first | cgi_escape }}"></a>
+	<h1>{{ tag | first }}</h1>
+	<ul class="postList">	
+	{% for posts in tag %}
+    {% for post in posts %}
+      {% if post.title %}
+    	  <li>
+          <a href="{{ post.url }}">{{post.title}}</a>
+        </li>
+	    {% endif %}
+    {% endfor %}
+  {% endfor %}
+	</ul>
+</div>				
+{% endfor %}

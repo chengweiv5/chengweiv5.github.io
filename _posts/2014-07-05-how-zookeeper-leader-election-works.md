@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "How Zookeeper Leader Election Works"
-tags: [zookeeper]
+tags:
+  - zookeeper
 ---
 
 As quote from [zookeeper homepage](http://zookeeper.apache.org/ "zookeeper") below.
@@ -27,14 +28,14 @@ The above diagram describes the leader election rules:
 - the client has smallest sequence number is the leader
 - every client watch its previous client, e.g. c\_i+1 watches c\_i, c\_i+3 watches c\_i+2
 
-###How about a non-leader client die?
+##How about a non-leader client die?
 If a follower client die, say c\_i+2 in below diagram, since c\_i+2 isn't the current leader client, so c\_i+3 will watch c\_i+1 now.
 
 ![diagram2](/assets/images/zookeeper/zookeeper-2.png "a non-leader client die")
 
 <center>diagram 2. A non-leader client(c_i+2) die</center>
 
-###How about the leader client die?
+##How about the leader client die?
 If the current leader die, that's mean c\_i die, see diagram below.
 
 ![diagram3](/assets/images/zookeeper/zookeeper-3.png "the leader client die")
