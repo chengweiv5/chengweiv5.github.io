@@ -50,8 +50,8 @@ blockquote {
 }
 
 .inlinetags {
-	border-left: solid #444444 1px;
-	border-bottom: solid #444444 1px;
+	border-left: solid #333333 1px;
+	border-bottom: solid #333333 1px;
 	font-style: italic;
 }
 

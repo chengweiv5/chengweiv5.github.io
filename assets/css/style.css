@@ -114,6 +114,9 @@ h5 {
 	margin-bottom: 1em;
 	padding-left: 0.5em;
 }
+.inlinetags a {
+	border-bottom: none;
+}
 
 .tags-and-numbers {
 	font-size: 1.0em;
@@ -126,7 +129,7 @@ li.postlist {
 	padding: 10px 0 10px 0;
 }
 
-span.date {
+.postdate, span.date {
 	color: #abab96;
 }
 
