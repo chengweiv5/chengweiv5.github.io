@@ -3,11 +3,11 @@ layout: default
 title: Chengwei's Words
 ---
 
+<article class="post">
+
 {% for post in paginator.posts %}
 
-	<article class="post">
-
-		<table width="100%">
+		<table width="100%" style="margin-bottom:30px">
 			<tr>
 				<td rowspan='2' width='100px'>
 					<span class="date">{{ post.date | date_to_string }}</span>
@@ -31,9 +31,9 @@ title: Chengwei's Words
 		</tr>
 		</table>
 
-	</article>
-
 {% endfor %}
+
+</article>
 
 
 
