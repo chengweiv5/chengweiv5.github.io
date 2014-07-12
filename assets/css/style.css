@@ -45,7 +45,7 @@ a:hover {
 }
 
 p { margin-bottom: 15px; }
-ul, ol { padding: 0px 10px 18px 0px; }
+ul, ol { padding: 0px 10px 18px 38px; }
 /*ol li, ul li { margin-top: 10px; margin-bottom: 10px; }*/
 em, i { font-style: italic; }
 strong, b { font-weight: bold; }
@@ -198,6 +198,13 @@ article .date {
 	padding: 2px 0px;
 }
 
+#sidebar ul {
+	padding-left: 0;
+}
+
+#sidebar ol {
+	padding-left: 0;
+}
 
 
 /*** Posts ***/
