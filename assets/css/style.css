@@ -123,6 +123,19 @@ h5 {
 	line-height: 1.5em;
 	padding: 0 0 0 0px;
 	font-style: italic;
+	width: 200px;
+}
+
+.tags-and-numbers-table {
+	width: 90%;
+}
+
+.tag-name {
+	text-align: left;
+}
+
+.tag-count {
+	text-align: right;
 }
 
 li.postlist {
