@@ -76,17 +76,19 @@ input[type=text] {
 	background-color: #073642;
 	border: none;
 	color: #2aa198;
-	width: 138px;
+	width: 130px;
 	height: 25px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
 
 button[type=submit] {
+	background-color: #073642;
 	border: none;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	height: 25px;
+	height: 27px;
+	padding: 0px 3px 0px 3px;
 }
 
 

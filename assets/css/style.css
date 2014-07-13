@@ -177,7 +177,7 @@ article .date {
 	height:500px;
 	min-height:500px;
 	width: 800px;
-	margin: auto 40px auto auto;
+	margin: auto auto auto auto;
 	padding: 30px 0px 0px 0px;
 }
 
@@ -272,6 +272,9 @@ img.center {
 
 
 /*** Media Queries ***/
+/*
+ * always show the full capacity page, minumum resolution is 1024 x 768, ipad
+ *
 @media all and (max-width: 870px) {
 
 	#page, #header, #content, #footer {
@@ -294,6 +297,7 @@ img.center {
 	}
 
 }
+	*/
 
 
 
