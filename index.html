@@ -26,7 +26,7 @@ title: Chengwei's Words
 
 		<tr>
 			<td>
-				<div class="post-content">{{ post.excerpt }}</div>
+				<div class="post-content">{{ post.excerpt | strip_html | truncatewords:50 }}</div>
 			</td>
 		</tr>
 		</table>
