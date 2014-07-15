@@ -19,16 +19,16 @@ layout: default
 	<p class="meta">Posted on <span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span></p>
 
 	<div class="postnavigation">
-		{% if page.previous %}
-		<a href="{{ page.previous.url }}" class="prev left">&larr; Older</a>
+		{% if page.next %}
+		<a href="{{ page.next.url }}" class="next left">&larr; Newer</a>
 		{% else %}
-		<span class="nope left">&larr; Older</span>
+		<span class="nope left">&larr; Newer</span>
 		{% endif %}
 		<a href="{{ site.url }}/archives/" class="pages">Archive</a>
-		{% if page.next %}
-		<a href="{{ page.next.url }}" class="next right">Newer &rarr;</a>
+		{% if page.previous %}
+		<a href="{{ page.previous.url }}" class="prev right">Older &rarr;</a>
 		{% else %}
-		<span class="nope right">Newer &rarr;</span>
+		<span class="nope right">Older &arra;</span>
 		{% endif %}
 	</div>
 
