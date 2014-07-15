@@ -18,25 +18,18 @@ layout: default
 
 	<p class="meta">Posted on <span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span></p>
 
-	<table class="pre-next-post" width=100%>
-		<tr>
-			<td style="text-align:left" width="33%">
-				{% if page.previous %}
-				<a href="{{ page.previous.url }}">&larr; Previous</a>
-				{% endif %}
-			</td>
-
-			<td style="text-align:center" width="33%">
-				<a href="{{ site.url }}/archives/">Archive</a>
-			</td>
-
-			<td style="text-align:right" width="33%">
-				{% if page.next %}
-				<a href="{{ page.next.url }}">Next &rarr;</a>
-				{% endif %}
-			</td>
-		</tr>
-	</table>
-
+	<div class="postnavigation">
+		{% if page.previous %}
+		<a href="{{ page.previous.url }}" class="prev left">&larr; Older</a>
+		{% else %}
+		<span class="nope left">&larr; Older</span>
+		{% endif %}
+		<a href="{{ site.url }}/archives/" class="pages">Archive</a>
+		{% if page.next %}
+		<a href="{{ page.next.url }}" class="next right">Newer &rarr;</a>
+		{% else %}
+		<span class="nope right">Newer &rarr;</span>
+		{% endif %}
+	</div>
 
 </article>
