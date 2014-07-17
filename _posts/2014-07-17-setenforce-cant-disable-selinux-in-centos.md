@@ -4,6 +4,7 @@ title: setenforce can't disable SELinux in RHEL
 tags:
   - centos
   - pitfall
+  - selinux
 ---
 
 So far I haven't experienced with SELinux a lot since I'm a Debian user, not
