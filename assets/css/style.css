@@ -265,7 +265,8 @@ img.center {
 	margin: 0 auto 1em auto;
 }
 
-
+.highlight {
+	margin-bottom: 15px;
 
 /*** Pagination ***/
 .postnavigation {
