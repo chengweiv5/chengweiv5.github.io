@@ -97,6 +97,9 @@ button[type=submit] {
 	color: #93a1a1;
 	border: 1px solid #2d6472;
 	border-radius: 3px 3px 3px 3px;
+	/* it's very hard to make scroll bar always show up to notice
+	 * people that there are more contents, depends on browsers.
+	 */
 	overflow: auto;
 	padding: 6px 10px;
 }
