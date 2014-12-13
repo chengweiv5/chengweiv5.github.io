@@ -6,16 +6,15 @@ tags:
   - coreos
 ---
 
-最近学习 CoreOS 时发现一个非常奇怪的现象：coreos-cloudinit 的文档声称在每次系统
-重启时都会加载 cloudinit 配置的文件；但是，我在 Vagrant 平台上修改 user-data
-后，重启后却发现并没有生效，但是更新后的 user-data 文件已经出现在了 CoreOS 文件
-系统中。
+最近学习 CoreOS 时发现一个非常奇怪的现象：coreos-cloudinit 的文档声称在每次系统重启时都会加载
+cloudinit 配置的文件；但是，我在 Vagrant 平台上修改 user-data
+后，重启后却发现并没有生效，但是更新后的 user-data 文件已经出现在了 CoreOS 文件系统中。
 
 下面详细介绍一下这个问题。
 
 首先，按照
 [Running CoreOS on Vagrant](https://coreos.com/docs/running-coreos/platforms/vagrant)
-文档，可以非常容易启动一个实例CoreOS，也可以参考我的另一篇博客
+文档，可以非常容易启动一个实例 CoreOS，也可以参考我的另一篇博客
 [CoreOS -- 第一次体验]({% post_url 2014-12-06-CoreOS-fisrt-step %})
 
 这里，假设 user-data 文件内容如下：
@@ -58,7 +57,7 @@ coreos:
 {% endhighlight %}
 
 当 CoreOS 启动后，我们可以取消上面最后几行的注释，所以，我们的本意是想让 CoreOS
-在下次启动的时候能够新建一个 /etc/test.txt 文件，并且内容为*hello, write_files*。
+在下次启动的时候能够新建一个 /etc/test.txt 文件，并且内容为 *hello, write_files*。
 
 修改 user-data 后，使用 vagrant 命令重启 CoreOS 并且重新加载 user-data。
 
@@ -150,13 +149,13 @@ coreos-cloudinit 提交了[错误报告](https://github.com/coreos/coreos-cloudi
 然后继续 debug。
 
 最后，终于发现原因在于：vagrant 将用户配置文件加载到 CoreOS 中的时间点**晚于**
-coreos-cloudinit 读取文件的时间，所以导致修改 user-data 后的第一次重启后没有
-读取到更新的 user-data，而只是读取到了上一次 vagrant 放进 CoreOS 中的旧的 user-data。
+coreos-cloudinit 读取文件的时间，所以导致修改 user-data 后的第一次重启后没有读取到更新的
+user-data，而只是读取到了上一次 vagrant 放进 CoreOS 中的旧的 user-data。
 
 这不仅从 coreos-cloudinit 的日志中（参考
 [github 讨论](https://github.com/coreos/coreos-cloudinit/issues/278)，我修改了 coreos-cloudinit，
-将其读取的文件内容打印到了日志）可以发现，还可以从 coreos-cloudinit 运行是的时间
-和 */var/lib/coreos-vagrant/vagrantfile-user-data* 的修改时间中发现。
+将其读取的文件内容打印到了日志）可以发现，还可以从 coreos-cloudinit 运行是的时间和
+*/var/lib/coreos-vagrant/vagrantfile-user-data* 的修改时间中发现。
 
 所以，这不是一个 coreos-cloudinit 的 bug，但是一个平台集成的 bug，CoreOS 和 Vagrant
 集成的 bug。
