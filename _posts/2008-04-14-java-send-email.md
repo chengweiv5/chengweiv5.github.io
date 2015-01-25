@@ -2,12 +2,17 @@
 layout: post
 title: 使用 JavaMail 发送邮件
 tags:
-  - java 笔记
+  - java
 ---
 
 使用 JavaMail 发送邮件：
 
-首先，jsp 中 <form action="servlet" method="post" ENCTYPE="multipart/form-data">
+首先，jsp 中
+
+{% highlight html %}
+<form action="servlet" method="post" ENCTYPE="multipart/form-data">
+{% endhighlight %}
+
 必须添加 ENCTYPE 属性才能支持附件上传功能。
 
 其次，编写两个类：
