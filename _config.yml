@@ -7,6 +7,6 @@ timezone: Asia/Chongqing
 
 permalink: /:year/:month/:day/:title/
 paginate: 10
-pygments: true
+highlighter: 'pygments'
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
