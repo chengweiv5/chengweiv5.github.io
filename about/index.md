@@ -3,8 +3,6 @@ layout: default
 title: About Me
 ---
 
-<article>
-
 <img src="/assets/images/avata.png" alt="avata" align="right" width="150px"/>
 
 I'm an open source fan, user, contributor.
@@ -29,5 +27,3 @@ We're now building a full featured private PaaS platform based on Docker.
 
 I am also attracted by [openstack](http://www.openstack.org/ "openstack") and
 willing to know more about it.
-
-</article>
