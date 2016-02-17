@@ -2,7 +2,7 @@
 layout: post
 title: Struts 集成 Ajax
 tags:
-  - java 笔记
+  - java
 ---
 
 看了一本书讲解了Struts集成Ajax，主要是在表单验证方面，这方面Ajax也很有优势。但是并没有使用到DWR。

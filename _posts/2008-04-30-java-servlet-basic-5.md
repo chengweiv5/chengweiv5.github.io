@@ -2,7 +2,7 @@
 layout: post
 title: Java Servlet 基础（五）：会话管理
 tags:
-  - java 笔记
+  - java
 ---
 
 常见的会话管理方式：

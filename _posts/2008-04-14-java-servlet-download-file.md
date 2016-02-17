@@ -2,7 +2,7 @@
 layout: post
 title: Java Servlet 中下载文件
 tags:
-  - java 笔记
+  - java
 ---
 
 在使用 Java Servlet 编写 Web 服务器时，很有可能会提供文件下载功能，这里记录了一些要点。

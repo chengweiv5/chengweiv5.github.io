@@ -2,7 +2,7 @@
 layout: post
 title: Echo2 中的 TemplateDataSource
 tags:
-  - java 笔记
+  - java
 ---
 
 最近在学习Echo2，使用模板时总有不顺，但是也有一点点心得。

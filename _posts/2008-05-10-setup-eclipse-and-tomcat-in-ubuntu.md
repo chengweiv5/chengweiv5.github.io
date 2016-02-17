@@ -2,7 +2,7 @@
 layout: post
 title: linux 下配置 eclipse3.3 + tomcat6.0
 tags:
-  - java 笔记
+  - java
 ---
 
 今天终于配置成功了Java Web开发环境，环境是Ubuntu8.04＋eclipse3.3+tomcat6.0。

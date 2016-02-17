@@ -2,7 +2,7 @@
 layout: post
 title: Java JSP 模型
 tags:
-  - java 笔记
+  - java
 ---
 
 #### JSP 模型

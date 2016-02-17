@@ -2,7 +2,7 @@
 layout: post
 title: Java Servlet 基础（二）
 tags:
-  - java 笔记
+  - java
 ---
 
 Java Servlet Web 应用程序的结构和部署

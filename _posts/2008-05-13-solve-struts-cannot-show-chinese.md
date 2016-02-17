@@ -2,7 +2,7 @@
 layout: post
 title: Struts 中乱码完全解决方法
 tags:
-  - java 笔记
+  - java
 ---
 
 可能很多人都遇到过和我一样的问题：不知道是什么原因，在写Servlet和Jsp的时候也是乱码不能解决，因为写的过滤器根本就没有起作用。现在到了Struts，还是有这个问题。郁闷好久了，上网搜了好久都是使用过滤器看起来最方便，其实也是。但是还是不起作用，我的方法都是post不知道为什么。今天深入了解Struts工作原理后，发现有一个地方可以设定编码，当然不是指的controller里面，在controller里面设定了contentType="text/html;gb2312"结果也没有用。而且我所有页面也统一使用gb2312。

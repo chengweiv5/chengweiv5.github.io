@@ -2,7 +2,7 @@
 layout: post
 title: Java Servlet 基础（四）：异常处理
 tags:
-  - java 笔记
+  - java
 ---
 
 #### 声明式异常处理

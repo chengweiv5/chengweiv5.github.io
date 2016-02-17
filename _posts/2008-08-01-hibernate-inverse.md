@@ -2,7 +2,7 @@
 layout: post
 title: Hibernate inverse
 tags:
-  - java 笔记
+  - java
 ---
 
 最近在学习Hibernate,对于inverse这个属性有点了解了，inverse主要是为了提高hibernate运行效率的，如果不是用inverse的话，hibernate就会从关系（还有set的类型）的两端来维护数据的统一，所以更新一项数据时会使用3条sql语句，即两条insert into加上一条update而如果使用了inverse就只有一条insert into和一条update语句。通常在一对多关系中在“多”端来维护数据，即在“一”端使用inverse="true"。而在多对多中由于效率相当所以选择合适的一端就可以了。举例来说：

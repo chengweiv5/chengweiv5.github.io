@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu 下设置 Java 环境变量和自举类路径
 tags:
-  - java 笔记
+  - java
 ---
 
 在Ubuntu8.04下设置Java环境变量如下：

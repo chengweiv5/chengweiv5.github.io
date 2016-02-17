@@ -2,7 +2,7 @@
 layout: post
 title: 解决 DWR session error
 tags:
-  - java 笔记
+  - java
 ---
 
 使用DWR出现Session error,控制台出现

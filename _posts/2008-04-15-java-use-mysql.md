@@ -2,7 +2,7 @@
 layout: post
 title: MyEclipse 连接 MySQL 数据库
 tags:
-  - java 笔记
+  - java
 ---
 
 像下面这样配置 MyEclipse：

@@ -2,7 +2,7 @@
 layout: post
 title: 解决 Java JSP 不能显示中文
 tags:
-  - java 笔记
+  - java
 ---
 
 在学习 JSP 的过程中，和大多数人一样，遇到一些中文乱码问题，这里记录了一些解决办法。

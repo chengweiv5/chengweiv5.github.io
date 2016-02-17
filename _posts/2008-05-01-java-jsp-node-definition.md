@@ -2,7 +2,7 @@
 layout: post
 title: Java JSP 自定义标签
 tags:
-  - java 笔记
+  - java
 ---
 
 #### JSP自定义标签库（javax.servlet.jsp.tagext包）

@@ -2,7 +2,7 @@
 layout: post
 title: 使用 JavaMail 发送邮件
 tags:
-  - java 笔记
+  - java
 ---
 
 使用 JavaMail 发送邮件：

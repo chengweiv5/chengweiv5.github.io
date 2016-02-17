@@ -2,7 +2,7 @@
 layout: post
 title: Java Servlet 基础（三）：容器模型
 tags:
-  - java 笔记
+  - java
 ---
 
 #### ServletContext

@@ -2,7 +2,7 @@
 layout: post
 title: Java Servlet 中上传文件要点
 tags:
-  - java 笔记
+  - java
 ---
 
 在使用 Java Servlet 编写 Web 服务器时，很有可能会提供文件上传功能，这里是我踩过的坑。

@@ -2,7 +2,7 @@
 layout: post
 title: Struts 集成 Validator
 tags:
-  - java 笔记
+  - java
 ---
 
 使用validator框架

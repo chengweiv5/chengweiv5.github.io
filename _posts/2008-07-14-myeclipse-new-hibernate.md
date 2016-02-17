@@ -2,7 +2,7 @@
 layout: post
 title: 在 MyEclipse 中添加 Hibernate 应用
 tags:
-  - java 笔记
+  - java
 ---
 
 在MyEclipse中添加Hibernate应用是很方便的，这里需要注意的有以下几点：

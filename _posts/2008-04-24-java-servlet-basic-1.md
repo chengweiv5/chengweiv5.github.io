@@ -2,7 +2,7 @@
 layout: post
 title: Java Servlet 基础（一）
 tags:
-  - java 笔记
+  - java
 ---
 
 通常我们写的Servlet都是继承自HttpServlet，同时由IDE生成的往往还有doGet和doPost方法，init()，destroy方法，这也是一个Servlet的生命周期的体现，其中最重要的就是service()方法，虽然我们不用重写service()因为对于http协议来说，我们通常都只用重写doGet()或doPost(),分别对应的http请求方式是GET和POST，而还有另外5种方式都不怎么用，也就是HEAD,PUT,DELETE
