@@ -47,7 +47,8 @@
         {% if site.tags.size > 0 %}
           <div class="tags-and-numbers">
             <table class="tags-and-numbers-table">
-              {% for tag in site.tags %}
+              {% assign sorted_tags = site.tags | sort %}
+              {% for tag in sorted_tags %}
                 {% assign tag_name = tag | first %}
                 {% assign tag_posts = site.tags[tag_name] %}
                 <tr>

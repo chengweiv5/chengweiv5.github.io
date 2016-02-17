@@ -2,9 +2,10 @@
 layout: default
 title: Tags
 ---
-<!-- categories -->	
+<!-- categories -->
 <article>
-{% for tag in site.tags %}
+{% assign sorted_tags = site.tags | sort %}
+{% for tag in sorted_tags %}
   <a name="{{ tag | first | cgi_escape }}"></a>
 	<h1>{{ tag | first }}</h1>
 	<ul>
