@@ -2,11 +2,10 @@ name: Chengwei's Words
 author: Chengwei Yang
 url: http://www.chengweiyang.cn
 description: "{hello world}"
-markdown: redcarpet
 timezone: Asia/Chongqing
 
 permalink: /:year/:month/:day/:title/
 paginate: 10
-highlighter: 'pygments'
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+gems: [jekyll-paginate]
