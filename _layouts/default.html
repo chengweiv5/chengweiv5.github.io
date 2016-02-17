@@ -36,14 +36,21 @@
       <nav>
 				{% include widgets/googleSearchForm.html %}
         <ul>
-          <li><a href="/gitbook">GitBook 简明教程</a></li>
           <li><a href="/">Home</a></li>
           <li><a href="/archives">Archive</a></li>
-          <li><a href="/about">About Me</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
-          <li><a href="/tags">Tags</a></li>
+          <li><a href="/about">About Me</a></li>
         </ul>
 
+        <ul>
+          <li><a href="/gitbook">GitBook 简明教程</a></li>
+          <li><a href="/爱奇艺Mesos实践.pdf">Mesos Meetup 2015</a></li>
+          <li><a href="/爱奇艺基于Docker的AppEngine实践.pdf">容器大会 2016</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="/tags">Tags</a></li>
+        </ul>
         {% if site.tags.size > 0 %}
           <div class="tags-and-numbers">
             <table class="tags-and-numbers-table">
