@@ -10,8 +10,8 @@ simple, small but to me it's good enough to hosts my humble words.
 
 This small site consists of many great stuff which I'm appreciated.
 
-- [github pages](pages.github.com)
-- [jekyll](jekyllrb.com)
+- [github pages](https://pages.github.com)
+- [jekyll](http://jekyllrb.com)
 - [solar-theme-jekyll](https://github.com/redwallhp/solar-theme-jekyll)
 - ...
 

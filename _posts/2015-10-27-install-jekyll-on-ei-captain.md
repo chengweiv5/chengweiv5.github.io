@@ -12,20 +12,20 @@ tags:
 ## 安装 jekyll 报错
 通过 `sudo gem install jekyll` 的时候报错：
 
-```
+ ```
  chengwei@Chengweis-MacBook-Air  ~  sudo gem install jekyll
  Password:
  Building native extensions.  This could take a while...
  ERROR:  Error installing jekyll:
     ERROR: Failed to build gem native extension.
 
-        /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
-        mkmf.rb can't find header files for ruby at /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/include/ruby.h
+       /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
+       mkmf.rb can't find header files for ruby at /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/include/ruby.h
 
 
         Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/redcarpet-3.3.3 for inspection.
         Results logged to /Library/Ruby/Gems/2.0.0/gems/redcarpet-3.3.3/ext/redcarpet/gem_make.out
-```
+ ```
 
 看起来像是找不到头文件，网上搜了一下发现有说是 Xcode 不是最新，或者没有安装，
 包括 Xcode command line tools 没有安装之类的。
@@ -45,41 +45,40 @@ tags:
 结果提示要首先同意使用条款才能使用，如下：
 
 ```
- chengwei@Chengweis-MacBook-Air  ~  make
+chengwei@Chengweis-MacBook-Air  ~  make
 
 
- Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
- ```
+Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
+```
 
- 然后，我就运行了 `sudo make`，然后按照提示，翻到条款最底部，然后输入了
- `agree`。
+然后，我就运行了 `sudo make`，然后按照提示，翻到条款最底部，然后输入了 `agree`。
 
- 完成后，make 就可以使用了。
+完成后，make 就可以使用了。
 
- 最后，见证奇迹的时刻到了，重新执行 `sudo gem install jekyll`，成功了。
+最后，见证奇迹的时刻到了，重新执行 `sudo gem install jekyll`，成功了。
 
- ```
- sudo gem install jekyll
- Building native extensions.  This could take a while...
- Successfully installed redcarpet-3.3.3
- Fetching: jekyll-paginate-1.1.0.gem (100%)
- Successfully installed jekyll-paginate-1.1.0
- Fetching: jekyll-gist-1.3.5.gem (100%)
- Successfully installed jekyll-gist-1.3.5
- ...
- Parsing documentation for yajl-ruby-1.2.1
- Installing ri documentation for yajl-ruby-1.2.1
- Done installing documentation for redcarpet, jekyll-paginate, jekyll-gist, coffee-script-source, execjs, coffee-script, jekyll-coffeescript, sass, jekyll-sass-converter, listen, jekyll-watch, classifier-reborn, jekyll, yajl-ruby after 27 seconds
- 14 gems installed
- ```
+```
+$ sudo gem install jekyll
+Building native extensions.  This could take a while...
+Successfully installed redcarpet-3.3.3
+Fetching: jekyll-paginate-1.1.0.gem (100%)
+Successfully installed jekyll-paginate-1.1.0
+Fetching: jekyll-gist-1.3.5.gem (100%)
+Successfully installed jekyll-gist-1.3.5
+...
+Parsing documentation for yajl-ruby-1.2.1
+Installing ri documentation for yajl-ruby-1.2.1
+Done installing documentation for redcarpet, jekyll-paginate, jekyll-gist, coffee-script-source, execjs, coffee-script, jekyll-coffeescript, sass, jekyll-sass-converter, listen, jekyll-watch, classifier-reborn, jekyll, yajl-ruby after 27 seconds
+14 gems installed
+```
 
 ## bundle install 报错
 
- jekyll 安装成功后，还远远没有完成，接下来需要使用 `bundle install` 安装依赖的
- gem。
+jekyll 安装成功后，还远远没有完成，接下来需要使用 `bundle install` 安装依赖的
+gem。
 
- 这里需要修改一下本项目的 Gemfile，将源修改为淘宝的 gem 源 `source
- 'https://ruby.taobao.org'`。
+这里需要修改一下本项目的 Gemfile，将源修改为淘宝的 gem 源 `source
+'https://ruby.taobao.org'`。
 
 安装到 nokogiri 的时候，又会出错，表示 nokogiri 不能安装，错误可能如下：
 
