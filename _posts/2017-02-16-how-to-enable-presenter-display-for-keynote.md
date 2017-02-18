@@ -2,7 +2,8 @@
 layout: post
 title: 怎样让 Keynote 在播放幻灯片的时候显示演讲者视图（Presenter Display）
 tags:
-  - linux
+  - mac
+  - keynote
 ---
 
 演讲者试图在做幻灯片演讲时非常有用，这样演讲者不仅能够从电脑上看到当前播放的页面，
