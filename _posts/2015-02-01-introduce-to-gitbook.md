@@ -13,7 +13,7 @@ gitbook 支持多种生成多种格式的书籍，包括：
 - PDF
 - 多种格式的电子书
 
-在编辑方面，除了直接编写 Markdown 文档之外，gitbook 还提供了所见即所得的[编辑器](https://github.com/GitbookIO/editor)。
+在编辑方面，除了直接编写 Markdown 文档之外，gitbook 还提供了所见即所得的[编辑器](https://www.gitbook.com/editor)。
 
 另外，[GitBook.com](https://www.gitbook.com/) 是一个围绕 gitbook 创业的书籍社区，用户可以在这里发布自己的书籍，以免费或者收费的方式！
 
