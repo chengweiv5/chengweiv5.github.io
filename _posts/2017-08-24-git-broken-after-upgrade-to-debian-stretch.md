@@ -19,9 +19,9 @@ Debian 9 “stretch” 发布已经有 2 个来月了，作为 Debian 粉，所�
 
 还有个问题就是 git clone/fetch/pull 等远程命令不工作了，通通都会报类似下面的错误：
 
-```
+{% highlight console %}
 fatal: unable to access 'https://chengwei.unfuddle.com/git/chengwei_awesome/': gnutls_handshake() failed: Public key signature verification has failed.
-```
+{% endhighlight %}
 
 Google 发现，这是一个从 stretch 还是 testing 的时候就存在的问题，
 真是悲伤，stretch 都已经转正了，这个问题还存在，令人失望。
@@ -31,22 +31,23 @@ Google 发现，这是一个从 stretch 还是 testing 的时候就存在的问�
 方法如下：
 
 1. 添加 jessie 的源到 /etc/apt/sources.list.d/jessie.list，内容如下：
-  ```
-  # cat jessie.list
-  deb http://mirrors.163.com/debian/ jessie main contrib non-free
-  deb-src http://mirrors.163.com/debian/ jessie main contrib non-free
-  ```
 
+    ```console
+    # cat jessie.list
+    deb http://mirrors.163.com/debian/ jessie main contrib non-free
+    deb-src http://mirrors.163.com/debian/ jessie main contrib non-free
+    ```
 2. 查看 jessie 中 libcurl3-gnutls 的版本
-  ```
-  # apt-get update
-  # apt-cache show apt-get -t=jessie install libcurl3-gnutls
-  ```
 
+    ```console
+    # apt-get update
+    # apt-cache show apt-get -t=jessie install libcurl3-gnutls
+    ```
 3. 然后安装 libcurl3-gnutls 指定版本，当前 jessie 中的版本是 7.38.0-4+deb8u5
-  ```
-  # apt-get install libcurl3-gnutls=7.38.0-4+deb8u5
-  ```
+
+    ```console
+    # apt-get install libcurl3-gnutls=7.38.0-4+deb8u5
+    ```
 
 安装完成后，git clone/fetch/pull 等命令就正常了。
 

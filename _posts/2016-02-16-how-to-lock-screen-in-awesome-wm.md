@@ -21,18 +21,18 @@ Awesome 多少年了。
 启动 gnome-screensaver 可以将下面的语句添加到 Awesome 的配置文件中
 `~/.config/awesome/rc.lua`。
 
-```
+{% highlight console %}
 awful.util.spawn_with_shell("/usr/bin/gnome-screensaver")
-```
+{% endhighlight %}
 
 当然，也可以在其它地方启动 gnome-screensaver，例如 `~/.xinitrc`。
 
 最后，绑定快捷键操作，在 `~/.config/awesome/rc.lua` 中的 `globalkeys` 的定义中，
 添加一行：
 
-```
+{% highlight console %}
 awful.key({ "Mod1", "Control" }, "l",     function () awful.util.spawn("gnome-screensaver-command --lock") end),
-```
+{% endhighlight %}
 
 这行语句定义了一个快捷键组合：Alt + Ctrol + l，当按下组合键时，会执行命令
 `gnome-screensaver-command --lock`，即启动锁屏。

@@ -10,7 +10,7 @@ Dell 服务器的 iDRAC 管理平台使用 javaws 来打开控制台，而在 Li
 
 使用 `javaws viewer.jnlp` 命令打开时，一路确定后，最后报错，从命令行输出可以看到如下错误：
 
-```bash
+{% highlight console %}
 netx: Initialization Error: Could not initialize application. (Fatal: Application Error: Cannot grant permissions to unsigned jars. Application requested security permissions, but jars are not signed.)
 net.sourceforge.jnlp.LaunchException: Fatal: Initialization Error: Could not initialize application. The application has not been initialized, for more information execute javaws from the command line.
         at net.sourceforge.jnlp.Launcher.createApplication(Launcher.java:782)
@@ -25,7 +25,7 @@ Caused by: net.sourceforge.jnlp.LaunchException: Fatal: Application Error: Canno
         at net.sourceforge.jnlp.runtime.JNLPClassLoader.getInstance(JNLPClassLoader.java:394)
         at net.sourceforge.jnlp.Launcher.createApplication(Launcher.java:774)
         ... 2 more
-```
+{% endhighlight %}
 
 根据错误提示 Google 好一会儿，无非都是说 java 从哪个版本开始加强了安全限制，
 也没说具体版本，总之就是没有找到直接能绕过的办法。

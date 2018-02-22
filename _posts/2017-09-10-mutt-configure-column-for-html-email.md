@@ -11,10 +11,10 @@ Mutt 是一个纯文本的邮件客户端，但是通过 mailcap 的配置，也
 安装了 w3m 之后，它会提供 mime 能力，在 debian 上，w3m mime pakcage 位于
 `/usr/lib/mime/packages/w3m`，文件内容如下：
 
-```
+{% highlight console %}
 text/html; /usr/bin/w3m -T text/html %s; needsterminal; description=HTML Text; nametemplate=%s.html; priority=4
 text/html; /usr/bin/w3m -I %{charset} -dump -T text/html %s; copiousoutput; description=HTML Text; nametemplate=%s.html; priority=3
-```
+{% endhighlight %}
 
 `update-mime` 命令会根据各个 mime package 以及一些其它配置，生成 `/etc/mailcap` 文件，
 所以，通常来说，不要直接修改 `/etc/mailcap` 文件，否则会被再次生成文件的时候冲掉，
@@ -26,19 +26,19 @@ text/html; /usr/bin/w3m -I %{charset} -dump -T text/html %s; copiousoutput; desc
 这里，为了使 w3m 在 mutt 邮件客户端中部使用默认的 80 字节宽度，而是使用整个 terminal 的宽度，
 需要修改下 mailcap 中的 w3m 命令，查看 w3m 帮助文档可以找到这个参数：
 
-```
+{% highlight console %}
     -cols width      specify column width (used with -dump)
-```
+{% endhighlight %}
 
 现在，需要查看 terminal 的宽度，可以使用 tput 命令：
 
-```
+{% highlight console %}
 $ tput cols
 151
-```
+{% endhighlight %}
 
 所以，在 `~/.mailcap` 中添加一行 w3m 的配置即可。
 
-```
+{% highlight console %}
+{% endhighlight %}
 text/html; /usr/bin/w3m -I %{charset} -cols 151 -dump -T text/html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
-```

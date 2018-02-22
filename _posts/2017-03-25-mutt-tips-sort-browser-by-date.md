@@ -15,11 +15,11 @@ tags:
 
 默认情况下，mutt 对收件箱的排序采用字符序，所以你可以通过类似在邮箱前面加一些排序字符，例如：
 
-```
+{% highlight console %}
 00-from-boss
 01-very-important
 02-...
-```
+{% endhighlight %}
 
 这样，重要的收件箱总是排在前面，但是不好的是，这个顺序是固定的。
 
@@ -28,7 +28,7 @@ tags:
 
 查看 mutt 文档，如下：
 
-```
+{% highlight console %}
 3.269. sort_browser
 
 Type: sort order
@@ -47,13 +47,13 @@ sorted alphabetically. Valid values:
 
 You may optionally use the “reverse-” prefix to specify reverse sorting order
 (example: “set sort_browser=reverse-date”).
-```
+{% endhighlight %}
 
 所以，只需要在 mutt 配置文件中加入下面的配置即可
 
-```
+{% highlight console %}
 set sort_browser=reverse-date
-```
+{% endhighlight %}
 
 这样，当任何收件箱有新邮件到达时，mutt 总是将最新的收件箱排序在顶部，如下图所示：
 

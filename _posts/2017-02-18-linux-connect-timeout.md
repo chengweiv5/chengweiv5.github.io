@@ -45,34 +45,34 @@ connect 对于 UDP 来说并不是必须的，而对于 TCP 来说则是一个�
 
 **首先，配置 iptables 来丢弃指定端口的 SYN 报文**
 
-```bash
+{% highlight console %}
 # iptables -A INPUT --protocol tcp --dport 5000 --syn -j DROP
-```
+{% endhighlight %}
 
 **然后，打开 tcpdump 观察到达指定端口的报文**
 
-```bash
+{% highlight console %}
 # tcpdump -i lo -Ss0 -n src 127.0.0.1 and dst 127.0.0.1 and port 5000
-```
+{% endhighlight %}
 
 **最后，使用 telnet 连接指定端口**
 
-```bash
+{% highlight console %}
 $ date; telnet 127.0.0.1 5000; date
-```
+{% endhighlight %}
 
 上面命令的输出如下：
 
-```bash
+{% highlight console %}
 Tue Jan  3 16:39:05 CST 2017
 Trying 127.0.0.1...
 telnet: Unable to connect to remote host: Connection timed out
 Tue Jan  3 16:41:12 CST 2017
-```
+{% endhighlight %}
 
 而从 `tcpdump` 命令的输出可以看到：
 
-```bash
+{% highlight console %}
 16:39:05.690238 IP 127.0.0.1.58933 > 127.0.0.1.5000: Flags [S], seq 2286786481, win 43690, options [mss 65495,sackOK,TS val 179222486 ecr 0,nop,wscale 7], length 0
 16:39:06.686988 IP 127.0.0.1.58933 > 127.0.0.1.5000: Flags [S], seq 2286786481, win 43690, options [mss 65495,sackOK,TS val 179222736 ecr 0,nop,wscale 7], length 0
 16:39:08.690980 IP 127.0.0.1.58933 > 127.0.0.1.5000: Flags [S], seq 2286786481, win 43690, options [mss 65495,sackOK,TS val 179223237 ecr 0,nop,wscale 7], length 0
@@ -80,7 +80,7 @@ Tue Jan  3 16:41:12 CST 2017
 16:39:20.718991 IP 127.0.0.1.58933 > 127.0.0.1.5000: Flags [S], seq 2286786481, win 43690, options [mss 65495,sackOK,TS val 179226244 ecr 0,nop,wscale 7], length 0
 16:39:36.766986 IP 127.0.0.1.58933 > 127.0.0.1.5000: Flags [S], seq 2286786481, win 43690, options [mss 65495,sackOK,TS val 179230256 ecr 0,nop,wscale 7], length 0
 16:40:08.830996 IP 127.0.0.1.58933 > 127.0.0.1.5000: Flags [S], seq 2286786481, win 43690, options [mss 65495,sackOK,TS val 179238272 ecr 0,nop,wscale 7], length 0
-```
+{% endhighlight %}
 
 其中，`Flags [S]` 表示为 SYN 报文，可以看到总共发送了 7 次 SYN 报文，最后一次的时间为 **16:40:08**，而 telnet 超时退出的时间为 **16:41:12**，相差 64 秒。
 
@@ -92,26 +92,26 @@ Tue Jan  3 16:41:12 CST 2017
 
 Linux 内核中，`net.ipv4.tcp_syn_retries` 表示建立 TCP 连接时 SYN 报文重试的次数，默认为 6，可以通过 sysctl 命令查看。
 
-```bash
+{% highlight console %}
 # sysctl -a | grep tcp_syn_retries
 net.ipv4.tcp_syn_retries = 6
-```
+{% endhighlight %}
 
 将其修改为 1，则可以将 connect 超时时间改为 3 秒，例如：
 
-```bash
+{% highlight console %}
 # sysctl net.ipv4.tcp_syn_retries=1
-```
+{% endhighlight %}
 
 再次使用 telnet 验证超时时间，如下：
 
-```bash
+{% highlight console %}
 $ date; telnet 127.0.0.1 5000; date
 Fri Feb 17 09:50:12 CST 2017
 Trying 127.0.0.1...
 telnet: Unable to connect to remote host: Connection timed out
 Fri Feb 17 09:50:15 CST 2017
-```
+{% endhighlight %}
 
 **注意：sysctl 修改的内核参数在系统重启后失效，如果需要持久化，可以修改系统配置文件**
 

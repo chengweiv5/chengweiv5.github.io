@@ -15,9 +15,9 @@ systemd 带来的改变，不同的管理服务的方式，不同的日志方式
 
 惊讶之余，查看服务的 `/proc/<pid>/limits` 却发现
 
-```
+{% highlight console %}
 Max open files            1024                1024                files
-```
+{% endhighlight %}
 
 那么，为什么服务使用 systemd 启动就没有生效呢？
 
@@ -29,13 +29,13 @@ systemd 实际上是会忽略 `/etc/security/limits.conf`，下面是 systemd 2 
 而这个 bug 也标记为已解决，在 pam 包中解决，这个包包含了 `/etc/security/limits.conf`，
 在这个文件中加入了如下注释：
 
-```
+{% highlight console %}
 # /etc/security/limits.conf
 #
 #This file sets the resource limits for the users logged in via PAM.
 #It does not affect resource limits of the system services.
 #
-```
+{% endhighlight %}
 
 注意，这里的 system services 指的是 system wide service，对于 CentOS 7 来说也就是系统的 service。
 
