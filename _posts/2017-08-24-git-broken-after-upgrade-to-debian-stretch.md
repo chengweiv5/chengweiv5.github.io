@@ -54,6 +54,6 @@ Google 发现，这是一个从 stretch 还是 testing 的时候就存在的问�
 最后，为了避免下次升级（`apt-get upgrade`）的时候，自动把 libcurl3-gnutls 给升级，可以用 `apt-mark`
 锁住这个包，命令如下：
 
-```
+{% highlight console %}
 # apt-mark hold libcurl3-gnutls
-```
+{% endhighlight %}
