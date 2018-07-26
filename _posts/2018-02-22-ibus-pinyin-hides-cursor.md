@@ -28,13 +28,17 @@ ii  ibus-pinyin                     1.5.0-4              amd64 Pinyin engine for
 这个 bug 在 debian 8 中并不存在，所以我在 ibus-pinyin 的上反馈了这个
 [bug](https://github.com/phuang/ibus-pinyin/issues/11)；不过，很遗憾，几个月来一直没有任何动静。
 
-我目前还没有找到绕过这个 bug 的办法，如果大家有好办法，欢迎评论。
+目前已知有 2 个输入法没有这个问题：
+
+- fcitx，我之前验证过
+- ibus-sunpinyin，这位同学发现的 `zqy2084 <zqy2084@163.com>`，感谢，验证后确实可行
+
+但是，针对 ibus-pinyin 这个问题本身，我目前还没有找到绕过这个 bug 的办法，如果大家有好办法，欢迎评论。
 
 笨办法有两个：
 
 1. 从 ibus-pinyin 切换回 english 输入法，注意：不是用 *shift* 键来让 ibus-pinyin
    输入英文
-
 2. 切换一下窗口，再切回来
 
 其它办法我尝试过：
