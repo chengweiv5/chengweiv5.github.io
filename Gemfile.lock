@@ -215,7 +215,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redcarpet (3.4.0)
     rouge (2.2.1)
     ruby-enum (0.7.2)
       i18n
@@ -247,7 +246,6 @@ DEPENDENCIES
   jekyll (>= 3.6.3)
   jekyll-paginate
   nokogiri (>= 1.8.5)
-  redcarpet
 
 BUNDLED WITH
    1.17.3
